@@ -1,0 +1,368 @@
+/* -------------------------
+   기본 설정
+------------------------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Pretendard","Malgun Gothic",sans-serif;
+}
+
+body{
+    background:#eaf6ff;
+    color:#222;
+}
+
+/* -------------------------
+   헤더
+------------------------- */
+
+header{
+    background:linear-gradient(135deg,#0077b6,#00b4d8);
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
+}
+
+header h1{
+    font-size:2.4rem;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1rem;
+    opacity:.9;
+}
+
+/* -------------------------
+   메인
+------------------------- */
+
+main{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    padding:25px 0;
+}
+
+/* -------------------------
+   지도
+------------------------- */
+
+.map-section{
+    position:relative;
+    margin-bottom:25px;
+}
+
+#map{
+    width:100%;
+    height:520px;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* -------------------------
+   범례
+------------------------- */
+
+.legend{
+    position:absolute;
+    right:20px;
+    top:20px;
+
+    background:white;
+    padding:15px;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    width:170px;
+}
+
+.legend h3{
+    margin-bottom:12px;
+    text-align:center;
+}
+
+.legend div{
+    display:flex;
+    align-items:center;
+    margin:8px 0;
+    font-size:14px;
+}
+
+.legend span{
+    width:20px;
+    height:20px;
+    border-radius:5px;
+    margin-right:10px;
+}
+
+.blue{
+    background:#0066ff;
+}
+
+.green{
+    background:#00b050;
+}
+
+.yellow{
+    background:#ffd400;
+}
+
+.orange{
+    background:#ff8800;
+}
+
+.red{
+    background:#ff2d2d;
+}
+
+/* -------------------------
+   카드
+------------------------- */
+
+.info-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-bottom:25px;
+}
+
+.card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+    color:#0077b6;
+    margin-bottom:18px;
+}
+
+.card p{
+    margin:12px 0;
+    font-size:17px;
+}
+
+.card span{
+    color:#0096c7;
+    font-weight:bold;
+}
+
+/* -------------------------
+   추천 어종
+------------------------- */
+
+.fish{
+
+    background:#f5fbff;
+
+    border-left:6px solid #0096c7;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    margin-bottom:15px;
+
+    transition:.3s;
+
+}
+
+.fish:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+.fish h3{
+    color:#0077b6;
+    margin-bottom:8px;
+}
+
+.fish p{
+    margin:5px 0;
+}
+
+/* -------------------------
+   추천 이유
+------------------------- */
+
+.reason{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.reason h2{
+
+    color:#0077b6;
+
+    margin-bottom:15px;
+
+}
+
+.reason li{
+
+    margin:10px 0;
+
+    font-size:16px;
+
+}
+
+/* -------------------------
+   표
+------------------------- */
+
+.status{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    margin-bottom:25px;
+
+}
+
+.status h2{
+
+    color:#0077b6;
+
+    margin-bottom:15px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+th{
+
+    background:#0096c7;
+
+    color:white;
+
+    padding:15px;
+
+}
+
+td{
+
+    padding:14px;
+
+    border-bottom:1px solid #ddd;
+
+    text-align:center;
+
+}
+
+tr:nth-child(even){
+
+    background:#f5fbff;
+
+}
+
+/* -------------------------
+   푸터
+------------------------- */
+
+footer{
+
+    background:#023e8a;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:30px;
+
+}
+
+footer p{
+
+    margin:5px 0;
+
+}
+
+/* -------------------------
+   반응형
+------------------------- */
+
+@media(max-width:900px){
+
+.info-container{
+
+grid-template-columns:1fr;
+
+}
+
+.legend{
+
+position:static;
+
+width:100%;
+
+margin-top:15px;
+
+}
+
+#map{
+
+height:400px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+header h1{
+
+font-size:1.8rem;
+
+}
+
+.card{
+
+padding:18px;
+
+}
+
+table{
+
+font-size:13px;
+
+}
+
+}
