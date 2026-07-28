@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Fish Finder - 부산 해양 어종 추천 시스템</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet 지도 -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>🌊 Marine Fish Finder</h1>
+    <p>부산 실시간 해양환경 · AI 어종 추천 시스템</p>
+</header>
+
+<main>
+
+    <!-- 지도 -->
+    <section class="map-section">
+
+        <div id="map"></div>
+
+        <!-- 범례 -->
+        <div class="legend">
+
+            <h3>수온 범례</h3>
+
+            <div><span class="blue"></span>15℃ 이하</div>
+            <div><span class="green"></span>16~20℃</div>
+            <div><span class="yellow"></span>21~23℃</div>
+            <div><span class="orange"></span>24~26℃</div>
+            <div><span class="red"></span>27℃ 이상</div>
+
+        </div>
+
+    </section>
+
+    <!-- 정보 -->
+    <section class="info-container">
+
+        <div class="card">
+
+            <h2>📍 현재 해역</h2>
+
+            <p><strong>지역 :</strong> 부산 앞바다</p>
+
+            <p>🌡 수온 :
+                <span id="temperature">-- ℃</span>
+            </p>
+
+            <p>🧂 염분 :
+                <span id="salinity">-- PSU</span>
+            </p>
+
+            <p>💧 용존산소 :
+                <span id="oxygen">-- mg/L</span>
+            </p>
+
+            <p>🌊 해류 속도 :
+                <span id="speed">-- m/s</span>
+            </p>
+
+            <p>🧭 해류 방향 :
+                <span id="direction">--</span>
+            </p>
+
+            <p>🍂 계절 :
+                <span id="season">--</span>
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>🎣 추천 어종</h2>
+
+            <div id="fishList">
+
+                <div class="fish">
+
+                    <h3>데이터를 불러오는 중...</h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- 추천 이유 -->
+    <section class="reason">
+
+        <h2>📊 추천 이유</h2>
+
+        <ul id="reasonList">
+
+            <li>해양 데이터를 분석하고 있습니다.</li>
+
+        </ul>
+
+    </section>
+
+    <!-- 실시간 데이터 -->
+    <section class="status">
+
+        <h2>📡 실시간 데이터</h2>
+
+        <table>
+
+            <tr>
+                <th>항목</th>
+                <th>값</th>
+            </tr>
+
+            <tr>
+                <td>수온</td>
+                <td id="tableTemp">--</td>
+            </tr>
+
+            <tr>
+                <td>염분</td>
+                <td id="tableSalinity">--</td>
+            </tr>
+
+            <tr>
+                <td>용존산소</td>
+                <td id="tableOxygen">--</td>
+            </tr>
+
+            <tr>
+                <td>해류</td>
+                <td id="tableCurrent">--</td>
+            </tr>
+
+            <tr>
+                <td>업데이트</td>
+                <td id="updateTime">--</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+        Marine Fish Finder © 2026
+    </p>
+
+    <p>
+        부산 해양환경 분석 기반 AI 어종 추천 서비스
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
